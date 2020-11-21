@@ -7,6 +7,8 @@ let person3: Personagem = new Personagem("Aria Stark", 100, 40, 20, 20);
 
 let teclado = prompt();
 let option: number = 0;
+let getNome = prompt();
+let personagemAtual = '';
 
 while (option != 9 || person.isDead()) {
     console.log("+========= Personagem =============+");
@@ -22,8 +24,21 @@ while (option != 9 || person.isDead()) {
 
     switch (option) {
         case 1:
-            person.treinarAtacar();
-            console.log(person.status());
+             personagemAtual = getNome("Digite o nome do personagem atual: ")
+
+            switch(personagemAtual) {
+                case 'Sansa Stark': 
+                    person.treinarAtacar();
+                    console.log(person.status());
+                
+                case 'John Snow':
+                    person2.treinarAtacar();
+                    console.log(person2.status());
+                case 'Aria Stark':
+                    person3.treinarAtacar();
+                    console.log(person3.status());
+            }
+
             break;
         case 2:
             person.treinarDefesa();
@@ -48,3 +63,9 @@ while (option != 9 || person.isDead()) {
     }
 }
 console.log("Ops! Morreu!");
+
+
+
+function escolherPersonagem(nome: string) {
+
+}
