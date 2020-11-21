@@ -7,7 +7,8 @@ export default class Arqueiro extends Personagem {
         public vida: number,
         public ataque: number,
         public defesa: number,
-        public agilizade: number
+        public agilidade: number,
+        public precisao: number
         ){
         super(nome, energia, vida, ataque, defesa);
     }
