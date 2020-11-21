@@ -7,7 +7,8 @@ export default class Guerreiro extends Personagem {
         public vida: number,
         public ataque: number,
         public defesa: number,
-        public forca: number
+        public forca: number,
+         public agilidade: number
         ){
         super(nome, energia, vida, ataque, defesa);
     }
