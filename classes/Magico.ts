@@ -6,7 +6,11 @@ export default class Magico extends Personagem {
         public energia: number,
         public vida: number,
         public ataque: number,
-        public defesa: number){
+        public defesa: number,
+        public inteligencia: number,
+        public agilidade: number,
+        public vitalidade: number
+        ){
         super(nome, energia, vida, ataque, defesa);
     }
 }
