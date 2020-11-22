@@ -1,4 +1,4 @@
-export default class Personagem {
+export class Personagem {
     constructor(
         public nome: string,
         public energia: number,
@@ -14,6 +14,7 @@ export default class Personagem {
             "Guerreiro: \n" +
             "\nNome: " +
             this.nome +
+            ("\nVida: " + this.vida.toFixed(1)) +
             ("\nEnergia: " + this.energia.toFixed(1)) +
             ("\nAtaque: " + this.ataque.toFixed(1)) +
             ("\nDefesa: " + this.defesa.toFixed(1))
