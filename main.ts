@@ -94,12 +94,12 @@ function retornarPersonagem(personagem: any) {
 function batalha(lutador1: any, lutador2: any) {
   if (lutador1.getPoderTotal > lutador2.getPoderTota) {
     console.log('Lutador 1 venceu!');
-    lutador2.vida = lutador2.vida - (lutador1.getPoderTotal() - lutador2.getPoderTotal());
+    lutador2.vida = lutador2.vida - (Math.abs(lutador1.getPoderTotal() - lutador2.getPoderTotal()));
     console.log(`${lutador2.nome} perdeu ${lutador1.getPoderTotal() - lutador2.getPoderTotal()} de vida`);
   
   } else {
     console.log("Lutador 2 venceu!");
-    lutador1.vida = lutador1.vida - (lutador2.getPoderTotal() - lutador1.getPoderTotal());
+    lutador1.vida = lutador1.vida - (Math.abs(lutador2.getPoderTotal() - lutador1.getPoderTotal()));
     console.log(`${lutador1.nome} perdeu ${lutador2.getPoderTotal() - lutador1.getPoderTotal()} de vida`);
   
   }
